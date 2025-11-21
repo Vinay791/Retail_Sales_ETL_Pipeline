@@ -74,14 +74,14 @@ Airflow schedules and runs the pipeline automatically (daily).
 sudo apt update
 sudo apt install python3 python3-venv python3-pip -y
 ```
-##2. Create Airflow environment
+## 2. Create Airflow environment
 ```
 mkdir airflow
 cd airflow
 python3 -m venv venv
 source venv/bin/activate
 ````
-##3. Install Airflow
+## 3. Install Airflow
 ```
 pip install apache-airflow
 ```
@@ -90,7 +90,7 @@ pip install apache-airflow
 pip install polars
 ```
 
-##5. Initialize Airflow
+## 5. Initialize Airflow
 ```
 airflow db init
 ```
@@ -101,32 +101,32 @@ airflow db init
 ```
 airflow webserver
 ```
-###Terminal 2:
+### Terminal 2:
 ```
 airflow scheduler
 ```
-###Open UI:
+### Open UI:
 ```
 http://localhost:8080
 ```
 
-#📦 Running the ETL
+# 📦 Running the ETL
 
-##Place your DAG here:
+## Place your DAG here:
 ```
 ~/airflow/dags/retail_sales_etl.py
 ```
 
-##Place the project folder (scripts, data) here:
+## Place the project folder (scripts, data) here:
 ```
 ~/airflow/retail_sales_project/
 ```
 
-##Trigger the DAG:
+## Trigger the DAG:
 ```
 airflow dags trigger retail_sales_etl
 ```
-##📊 Outputs Generated
+## 📊 Outputs Generated
 
 All outputs appear in data/processed/:
 
