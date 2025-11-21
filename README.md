@@ -85,5 +85,69 @@ source venv/bin/activate
 ```
 pip install apache-airflow
 ```
+##4. Install project dependencies
+```
+pip install polars
+```
+
+##5. Initialize Airflow
+```
+airflow db init
+```
+
+##6. Start Airflow services
+
+###Terminal 1:
+```
+airflow webserver
+```
+###Terminal 2:
+```
+airflow scheduler
+```
+###Open UI:
+```
+http://localhost:8080
+```
+
+#📦 Running the ETL
+
+##Place your DAG here:
+```
+~/airflow/dags/retail_sales_etl.py
+```
+
+##Place the project folder (scripts, data) here:
+```
+~/airflow/retail_sales_project/
+```
+
+##Trigger the DAG:
+```
+airflow dags trigger retail_sales_etl
+```
+##📊 Outputs Generated
+
+All outputs appear in data/processed/:
+
+extracted.parquet
+
+- clean_sales.parquet
+
+- clean_sales_copy.parquet
+
+- analytics_top_customers.csv
+
+- analytics_daily_sales.csv
+
+- analytics_monthly_sales.csv
+
+| Component       | Technology                    |
+| --------------- | ----------------------------- |
+| Data Processing | Polars                        |
+| Scheduling      | Airflow                       |
+| File Format     | Parquet                       |
+| Environment     | Linux / Ubuntu / WSL / VMware |
+| Language        | Python                        |
 
 
