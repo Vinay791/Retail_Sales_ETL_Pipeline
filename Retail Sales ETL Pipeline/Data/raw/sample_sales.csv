@@ -1,0 +1,7 @@
+order_id,customer,product,quantity,price,date
+101,John,Laptop,1,50000,2024-01-05
+102,Asha,Mouse,2,800,2024-01-06
+103,Ravi,Laptop,1,52000,2024-01-07
+104,John,Keyboard,1,1500,2024-01-07
+105,Asha,Laptop,1,51000,2024-01-08
+106,,Mouse,1,800,2024-01-08
